@@ -126,3 +126,16 @@ Feel free to customize the parameters according to what you want to test.
 
 
 Good luck, and we look forward to reviewing your solution!
+
+Monitoring:
+Monitoring your applications and resources plays a vital role in DevOps area. We opted Prometheus along with Grafana to monitor the resources and the metrics from Caddy web server. We are also integrating Node metrics and push gateway metrics along with these. The reason behind monitoring node metrics is to fetch hardware & OS-level system metrics exposed by kernels through metric collectors.
+
+Node Metrics measures multiple metrics such as:
+
+Memory  RAM total, RAM used, RAM cache, RAM free
+Disk    Disk space, IOps-Mount
+CPU     CPU load, CPU Memory Disk
+Network Network traffic, TCP flow, Connections
+
+Push Gateway:
+Occasionally, we will need to monitor components which cannot be scraped. The Prometheus push gateway allows us to push time series metrics from short-lived service level batch jobs to an intermediate jobs which prometheus can scrape. 
